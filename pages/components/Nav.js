@@ -20,8 +20,14 @@ function Nav() {
         <div>
             <nav className="bg-transparent  ">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto md:p-4">
-                    <Link href="" className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <Image src="/asset/logo.jpeg" className={`h-8`} alt="Flowbite Logo" width={100} height={100} />
+                    <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                        {/* <Image src="/asset/logo.jpeg" className={`h-8`} alt="Flowbite Logo" width={100} height={100} /> */}
+                       
+                            <div className='flex gap-1'>
+                                <h1 className='text-red-600'>Sheba </h1>
+                                <h1 className='text-white'>Point</h1>
+                            </div>
+                        
                         {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span> */}
                     </Link>
                     <div className='z-[999] block md:hidden'>
@@ -52,7 +58,7 @@ function Nav() {
                         ref={navRef}
 
                         id="navbar-default">
-                        <ul style={{background:"transparent"}} className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:border-gray-700">
+                        <ul style={{ background: "transparent" }} className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:border-gray-700">
                             <li>
                                 <Link href="#" className="block py-2 px-3 text-white bg-red-700 rounded md:bg-transparent md:text-red-700 md:p-0 dark:text-white" aria-current="page">Home</Link>
                             </li>
