@@ -1,0 +1,131 @@
+.posterImage {
+    border-radius: 53% 47% 70% 30%/30% 65% 35% 70%;
+    animation-name: posterAnimation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    
+    transition: all 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes posterAnimation {
+    0% {
+        border-radius: 53% 47% 70% 30%/30% 65% 35% 70%;
+    }
+
+    10% {
+        border-radius: 53% 47% 41% 59%/30% 43% 57% 70%;
+    }
+
+    30% {
+        border-radius: 53% 47% 23% 77%/67% 43% 57% 33%;
+    }
+
+    50% {
+        border-radius: 53% 47% 28% 72%/55% 20% 80% 45%;
+    }
+
+    70% {
+        border-radius: 22% 78% 48% 52%/55% 49% 51% 45%;
+    }
+
+    100% {
+        border-radius: 53% 47% 70% 30%/30% 65% 35% 70%;
+    }
+}
+
+.projects:nth-child(even) {
+    display: flex;
+    align-items: center;
+    justify-items: end;
+    justify-content: center;
+    width: 50%;
+}
+
+.projects:nth-child(odd) {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-items: end;
+    justify-content: center;
+    width: 50%;
+}
+
+.projects>.Image :nth-child(even) {
+    width: clamp(17.375rem, 11.2566rem + 32.6316vw, 40.625rem);
+    grid-column: 0/3;
+    box-shadow: -15px 16px 1px 1px #bebebe;
+}
+
+
+.projects>.Image:nth-child(odd) {
+    width: clamp(17.375rem, 11.2566rem + 32.6316vw, 40.625rem);
+    grid-column: 0/3;
+    box-shadow: -20px 13px 1px 1px #bebebe;
+}
+
+.imageText {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 384px;
+    height: 210px;
+    gap: 30px;
+    z-index: 99;
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    grid-column: 2/-1;
+    box-shadow: 5px -4px 20px 0px #00000017;
+}
+
+@media only screen and (max-width: 768px) {
+    .projects:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: end;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .projects:nth-child(odd) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-items: end;
+        justify-content: center;
+        width: 50%;
+    }
+
+
+    .projects>.Image :nth-child(even) {
+        width: clamp(17.375rem, 11.2566rem + 32.6316vw, 40.625rem);
+        grid-column: 0/3;
+        
+    }
+
+
+    .projects>.Image:nth-child(odd) {
+        width: clamp(17.375rem, 11.2566rem + 32.6316vw, 40.625rem);
+        grid-column: 0/3;
+        
+    }
+
+    .imageText {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        align-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 384px;
+        height: 210px;
+        gap: 30px;
+        padding: 50px;
+        grid-column: 2/-1;
+    }
+}

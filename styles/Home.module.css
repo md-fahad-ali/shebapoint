@@ -1,0 +1,97 @@
+.navlink {
+    clip-path: circle(0.4% at 100% 0)
+}
+
+.banner {
+    background: url('/asset/dot.svg') no-repeat -25vw 391px;
+    background-size: cover;
+    background-size: auto;
+    background-size: 50% 50%;
+}
+
+.posterImage {
+    border-radius: 53% 47% 70% 30%/30% 65% 35% 70%;
+    animation-name: posterAnimation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    background: #FFBBBB;
+    transition: all 3s;
+    width: 40%;
+    position: absolute;
+    animation-timing-function: linear;
+}
+
+@keyframes posterAnimation {
+    0% {
+        border-radius: 53% 47% 70% 30%/30% 65% 35% 70%;
+    }
+
+    10% {
+        border-radius: 53% 47% 41% 59%/30% 43% 57% 70%;
+    }
+
+    30% {
+        border-radius: 53% 47% 23% 77%/67% 43% 57% 33%;
+    }
+
+    50% {
+        border-radius: 53% 47% 28% 72%/55% 20% 80% 45%;
+    }
+
+    70% {
+        border-radius: 22% 78% 48% 52%/55% 49% 51% 45%;
+    }
+
+    100% {
+        border-radius: 53% 47% 70% 30%/30% 65% 35% 70%;
+    }
+}
+
+.posterBox{
+    animation-name: posterAni;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-direction: alternate-reverse;
+}
+
+@keyframes posterAni {
+    from{
+        transform: translateY(20px);
+    }to{
+        transform: translateY(-20px);
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .poster {
+        /* top: 20%; */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .banner {
+        background-image: none;
+        background-size: cover;
+        background-size: auto;
+        background-size: 50% 50%;
+    }
+}
+@media only screen and (min-width: 850px) {
+    .posterBox{
+        width: 50%;
+    }
+   
+}
+@media only screen and (max-width: 850px) {
+    .posterBox{
+        width: 100%;
+    }
+   
+}
+@media only screen and (min-width: 828px) {
+    .bannertxt,.bannertxt2,.bannertxt3{
+        font-size: 3.5rem;
+    }
+    
+}
